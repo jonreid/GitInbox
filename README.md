@@ -1,4 +1,4 @@
-# GitInbox
+# GitInbox (exploring TDD in a SwiftUI World)
 
 I’m writing a GitHub notifications viewer iOS app to explore [TDD in a SwiftUI World](https://qualitycoding.org/tdd-swiftui-series/). Read [the first article](https://qualitycoding.org/tdd-for-swiftui-lets-begin) to learn about my goals.
 
