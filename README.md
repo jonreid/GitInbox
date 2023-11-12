@@ -20,7 +20,7 @@ _Consider subscribing to support my stream_
 
 The following day, I’ll put the recording onto my YouTube channel. Your comments there will also be helpful.
 
-[Subscribe on YouTube](https://www.youtube.com/c/qualitycoding)
+[Subscribe on YouTube](https://www.youtube.com/@qualitycoding)
 
 ## Articles on QualityCoding.org
 
