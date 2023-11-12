@@ -6,11 +6,11 @@ There will be Xcode project configuration. There will be architecture, design, a
 
 Stick around to find out.
 
-My plan is to live-code this project on Twitch, post the recordings on YouTube, then turn what we discover into articles.
+My plan is to live-code this project on Twitch, post the recordings on YouTube, and then turn what we discover into articles.
 
 ## Live-Coding on Twitch
 
-I’ll be streaming Sundays at 9:30am Pacific (17:30 GMT) for roughly an hour. Join so you can **chat with me live.** Chances are, you know more about SwiftUI than I do, and I’ll need your help. But I’ll be trying to apply the interesting practices listed in the [introductory article](https://qualitycoding.org/tdd-for-swiftui-lets-begin). This will be real, warts and all!
+I’ll be streaming Sundays at 9:30 am Pacific (17:30 GMT) for roughly an hour. Join so you can **chat with me live.** Chances are, you know more about SwiftUI than I do, and I’ll need your help. But I’ll be trying to apply the interesting practices listed in the [introductory article](https://qualitycoding.org/tdd-for-swiftui-lets-begin). This will be real, warts and all!
 
 [Follow on Twitch](https://www.twitch.tv/qcoding)
 
@@ -24,6 +24,10 @@ The following day, I’ll put the recording onto my YouTube channel. Your commen
 
 ## Articles on QualityCoding.org
 
-Then I’ll refine what we discover into articles which I’ll post on my blog. Make sure you don’t miss a single post in this series. **Subscribe to my newsletter,** and I’ll notify you about new posts by email.
+Then I’ll refine what we discover into articles which I’ll post on my blog.
+
+These articles will span a variety of topics. I expect they will cover the main categories of my blog: unit testing, TDD, refactoring, and tools. To make things easier to find, I’ve made a dedicated [TDD in a SwiftUI World](https://qualitycoding.org/tdd-swiftui-series/) page to collect the articles that come from this project, as I start from an empty GitHub repo.
+
+Make sure you don’t miss a single post in this series. **Subscribe to my newsletter,** and I’ll notify you about new posts by email.
 
 [Subscribe to Newsletter](https://qualitycoding.org/subscribe-swiftui-tdd/)
