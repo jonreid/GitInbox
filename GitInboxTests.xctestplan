@@ -17,7 +17,6 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:GitInbox.xcodeproj",
         "identifier" : "0FA214632B0A896A00760CDF",
