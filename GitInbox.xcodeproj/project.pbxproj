@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F9631492B13C75F001CCF7F /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9631482B13C75F001CCF7F /* Main.swift */; };
+		0F96314B2B13C90B001CCF7F /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96314A2B13C90B001CCF7F /* TestApp.swift */; };
 		0FA214582B0A896900760CDF /* GitInboxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA214572B0A896900760CDF /* GitInboxApp.swift */; };
 		0FA2145A2B0A896900760CDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA214592B0A896900760CDF /* ContentView.swift */; };
 		0FA2145C2B0A896A00760CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA2145B2B0A896A00760CDF /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		0F9631472B13BFE6001CCF7F /* GitInboxTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitInboxTests.xctestplan; sourceTree = "<group>"; };
 		0F9631482B13C75F001CCF7F /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		0F96314A2B13C90B001CCF7F /* TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp.swift; sourceTree = "<group>"; };
 		0FA214542B0A896900760CDF /* GitInbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitInbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA214572B0A896900760CDF /* GitInboxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitInboxApp.swift; sourceTree = "<group>"; };
 		0FA214592B0A896900760CDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				0FA2145B2B0A896A00760CDF /* Assets.xcassets */,
 				0FA2145D2B0A896A00760CDF /* Preview Content */,
 				0F9631482B13C75F001CCF7F /* Main.swift */,
+				0F96314A2B13C90B001CCF7F /* TestApp.swift */,
 			);
 			path = GitInbox;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F9631492B13C75F001CCF7F /* Main.swift in Sources */,
+				0F96314B2B13C90B001CCF7F /* TestApp.swift in Sources */,
 				0FA2145A2B0A896900760CDF /* ContentView.swift in Sources */,
 				0FA214582B0A896900760CDF /* GitInboxApp.swift in Sources */,
 			);

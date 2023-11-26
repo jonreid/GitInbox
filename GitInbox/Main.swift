@@ -1,12 +1,12 @@
 import SwiftUI
 
-@main                                        // 2
+@main
 struct Main {
     static func main() {
-//        if NSClassFromString("XCTestCase") != nil {    // 3
-//            TestApp.main()
-//        } else {
+        if NSClassFromString("XCTestCase") != nil {
+            TestApp.main()
+        } else {
             GitInboxApp.main()
-//        }
+        }
     }
 }
