@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F9631472B13BFE6001CCF7F /* GitInboxTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitInboxTests.xctestplan; sourceTree = "<group>"; };
 		0FA214542B0A896900760CDF /* GitInbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitInbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA214572B0A896900760CDF /* GitInboxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitInboxApp.swift; sourceTree = "<group>"; };
 		0FA214592B0A896900760CDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		0FA2144B2B0A896900760CDF = {
 			isa = PBXGroup;
 			children = (
+				0F9631472B13BFE6001CCF7F /* GitInboxTests.xctestplan */,
 				0FA214562B0A896900760CDF /* GitInbox */,
 				0FA214672B0A896A00760CDF /* GitInboxTests */,
 				0FA214712B0A896A00760CDF /* GitInboxUITests */,
