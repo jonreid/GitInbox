@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct Main {
+struct MainEntryPoint {
     static func main() {
         if NSClassFromString("XCTestCase") != nil {
             TestApp.main()
