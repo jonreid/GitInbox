@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F83D2F42B1CF6D800417E7A /* PlaceholderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F83D2F32B1CF6D800417E7A /* PlaceholderTests.swift */; };
 		0F9631492B13C75F001CCF7F /* MainEntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9631482B13C75F001CCF7F /* MainEntryPoint.swift */; };
 		0F96314B2B13C90B001CCF7F /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96314A2B13C90B001CCF7F /* TestApp.swift */; };
 		0FA214582B0A896900760CDF /* GitInboxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA214572B0A896900760CDF /* GitInboxApp.swift */; };
 		0FA2145A2B0A896900760CDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA214592B0A896900760CDF /* ContentView.swift */; };
 		0FA2145C2B0A896A00760CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA2145B2B0A896A00760CDF /* Assets.xcassets */; };
 		0FA2145F2B0A896A00760CDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA2145E2B0A896A00760CDF /* Preview Assets.xcassets */; };
-		0FA214692B0A896A00760CDF /* GitInboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA214682B0A896A00760CDF /* GitInboxTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F83D2F32B1CF6D800417E7A /* PlaceholderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTests.swift; sourceTree = "<group>"; };
 		0F9631472B13BFE6001CCF7F /* GitInboxTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitInboxTests.xctestplan; sourceTree = "<group>"; };
 		0F9631482B13C75F001CCF7F /* MainEntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEntryPoint.swift; sourceTree = "<group>"; };
 		0F96314A2B13C90B001CCF7F /* TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp.swift; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		0FA2145B2B0A896A00760CDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FA2145E2B0A896A00760CDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0FA214642B0A896A00760CDF /* GitInboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitInboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FA214682B0A896A00760CDF /* GitInboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitInboxTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 		0FA214672B0A896A00760CDF /* GitInboxTests */ = {
 			isa = PBXGroup;
 			children = (
-				0FA214682B0A896A00760CDF /* GitInboxTests.swift */,
+				0F83D2F32B1CF6D800417E7A /* PlaceholderTests.swift */,
 			);
 			path = GitInboxTests;
 			sourceTree = "<group>";
@@ -158,6 +158,7 @@
 					};
 					0FA214632B0A896A00760CDF = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 						TestTargetID = 0FA214532B0A896900760CDF;
 					};
 				};
@@ -216,7 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FA214692B0A896A00760CDF /* GitInboxTests.swift in Sources */,
+				0F83D2F42B1CF6D800417E7A /* PlaceholderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +414,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EH4R632375;
@@ -422,6 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.qualitycoding.GitInboxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitInbox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GitInbox";
@@ -433,6 +436,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EH4R632375;
