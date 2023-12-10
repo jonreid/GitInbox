@@ -9,6 +9,8 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v4
+    - name: Set up Xcode version
+      run: sudo xcode-select -switch /Applications/Xcode_15.0.1.app
     - name: Show current version of Xcode
       run: xcodebuild -version
     - name: Run tests
