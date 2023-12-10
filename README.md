@@ -2,6 +2,7 @@
 
 [![Build](https://github.com/jonreid/GitInbox/actions/workflows/build.yml/badge.svg)](https://github.com/jonreid/GitInbox/actions/workflows/build.yml)
 
+
 I’m writing a GitHub notifications viewer iOS app to explore [TDD in a SwiftUI World](https://qualitycoding.org/tdd-swiftui-series/). Read [the first article](https://qualitycoding.org/tdd-for-swiftui-lets-begin) to learn about my goals.
 
 There will be Xcode project configuration. There will be architecture, design, and refactoring. There will be test-driven development (TDD). And how will I approach SwiftUI?
