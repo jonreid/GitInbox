@@ -10,7 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Xcode version
-      run: sudo xcode-select -switch /Applications/Xcode_15.0.1.app
+      uses: maxim-lobanov/setup-xcode@v1.6.0
+      with:
+        xcode-version: '15.0.1'
     - name: Show current version of Xcode
       run: xcodebuild -version
     - name: Run tests
