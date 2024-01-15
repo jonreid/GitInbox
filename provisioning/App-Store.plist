@@ -7,7 +7,7 @@
 	<key>method</key>
 	<string>app-store</string>
 	<key>teamID</key>
-	<string>ZYT2B38A3E</string>
+	<string>EH4R632375</string>
 	<key>uploadBitcode</key>
 	<false/>
 	<key>uploadSymbols</key>
@@ -15,11 +15,11 @@
 	<key>signingStyle</key>
 	<string>manual</string>
 	<key>signingCertificate</key>
-	<string>Apple Development: Jonathan Reid</string>
+	<string>Apple Distribution: Jonathan Reid</string>
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>org.qualitycoding.GitInbox</key>
-		<string>GitInbox</string>
+		<string>GitInbox Distribution</string>
 	</dict>
 </dict>
 </plist>
