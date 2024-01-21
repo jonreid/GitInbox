@@ -14,3 +14,5 @@ jobs:
       run: xcodebuild -version
     - name: Dump file hierarchy
       run: ls -R
+    - name: Build archive and export
+      run: ./build_archive.sh
