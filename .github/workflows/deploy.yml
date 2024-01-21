@@ -16,5 +16,7 @@ jobs:
       run: ls -R
     - name: Import provisioning
       run: provisioning/import_provisioning.sh
+      env:
+          PROVISIONING_PASSWORD: ${{ secrets.PROVISIONING_PASSWORD }}
     - name: Build archive and export
       run: ./build_archive.sh
