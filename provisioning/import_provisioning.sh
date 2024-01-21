@@ -2,8 +2,8 @@
 
 # Decrypt the files
 # --batch to prevent interactive command --yes to assume "yes" for questions
-gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output provisioning/Certificates.p12 provisioning/AppStoreCertificates.p12.gpg
-gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output provisioning/GitInbox_Distribution.mobileprovision provisioning/GitInbox_Distribution.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output provisioning/Certificates.p12 provisioning/Certificates.p12.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output provisioning/GitInbox_Distribution.mobileprovision provisioning/GitInbox_Distribution.mobileprovision.gpg
 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 
