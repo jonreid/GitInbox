@@ -14,5 +14,7 @@ jobs:
       run: xcodebuild -version
     - name: Dump file hierarchy
       run: ls -R
+    - name: Import provisioning
+      run: provisioning/import_provisioning.sh
     - name: Build archive and export
       run: ./build_archive.sh
