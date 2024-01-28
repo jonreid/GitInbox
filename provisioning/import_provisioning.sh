@@ -7,11 +7,14 @@ gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --outp
 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 
-echo "List profiles"
+echo "-------------"
+echo "List profiles:"
 ls ~/Library/MobileDevice/Provisioning\ Profiles/
+echo "-------------"
 echo "Move profiles"
 cp provisioning/*.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
-echo "List profiles"
+echo "-------------"
+echo "List profiles:"
 ls ~/Library/MobileDevice/Provisioning\ Profiles/
 
 # security create-keychain -p "" build.keychain
