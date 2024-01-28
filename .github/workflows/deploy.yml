@@ -24,6 +24,6 @@ jobs:
       run: |
         xcrun altool --upload-app --type ios \
           --file DerivedData/ipa/GitInbox.ipa \
-          --username "${{ secrets.appstore_connect_username }}" \
-          --password "${{ secrets.appstore_connect_password }}" --verbose
+          --username "${{ secrets.APPSTORE_CONNECT_USERNAME }}" \
+          --password "${{ secrets.APPSTORE_CONNECT_PASSWORD }}" --verbose
 
