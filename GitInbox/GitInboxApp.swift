@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-abc_struct GitInboxApp: App {
+struct GitInboxApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
