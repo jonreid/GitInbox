@@ -28,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		0F83D2F32B1CF6D800417E7A /* PlaceholderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTests.swift; sourceTree = "<group>"; };
+		0F8D23292B7940920099875D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0F9631472B13BFE6001CCF7F /* GitInboxTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitInboxTests.xctestplan; sourceTree = "<group>"; };
 		0F9631482B13C75F001CCF7F /* MainEntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEntryPoint.swift; sourceTree = "<group>"; };
 		0F96314A2B13C90B001CCF7F /* TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		0FA214562B0A896900760CDF /* GitInbox */ = {
 			isa = PBXGroup;
 			children = (
+				0F8D23292B7940920099875D /* Info.plist */,
 				0FA214572B0A896900760CDF /* GitInboxApp.swift */,
 				0FA214592B0A896900760CDF /* ContentView.swift */,
 				0FA2145B2B0A896A00760CDF /* Assets.xcassets */,
@@ -364,6 +366,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = EH4R632375;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GitInbox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -397,6 +400,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = EH4R632375;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GitInbox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
