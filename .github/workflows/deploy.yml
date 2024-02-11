@@ -3,13 +3,18 @@ name: Deploy
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["Build"]
-    types:
-      - completed
+    workflows: [Build]
+    types: [completed]
 
 jobs:
-  Deploy:
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - run: echo 'The triggering workflow failed'
+  on-success:
     runs-on: macos-13
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
     - uses: actions/checkout@v4
     - name: Commit SHA
