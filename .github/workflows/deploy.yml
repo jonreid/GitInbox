@@ -8,6 +8,8 @@ jobs:
     runs-on: macos-13
     steps:
     - uses: actions/checkout@v4
+    - name: Commit SHA
+      run: echo $GITHUB_SHA
     - name: Set up Xcode version
       run: sudo xcode-select -s /Applications/Xcode_15.1.app/Contents/Developer
     - name: Show current version of Xcode
