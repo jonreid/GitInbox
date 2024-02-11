@@ -11,7 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
-      - run: echo 'The triggering workflow failed'
+      - run: |
+          echo 'The triggering workflow failed'
+          exit 1
   on-success:
     runs-on: macos-13
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
