@@ -2,9 +2,13 @@ name: Deploy
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      - completed
 
 jobs:
-  Build:
+  Deploy:
     runs-on: macos-13
     steps:
     - uses: actions/checkout@v4
