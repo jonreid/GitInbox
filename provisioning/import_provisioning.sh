@@ -1,27 +1,27 @@
-#!/bin/sh
+#!/bin/bash
 
-# Decrypt the files
+CERTIFICATE="provisioning/Certificates.p12"
+PROVISIONING="provisioning/GitInbox_Distribution.mobileprovision"
+
+PROVISIONING_PATH="$HOME/Library/MobileDevice/Provisioning\ Profiles"
+KEYCHAIN="$HOME/Library/Keychains/build.keychain"
+
+echo "Decrypt the files"
 # --batch to prevent interactive command --yes to assume "yes" for questions
-gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output provisioning/Certificates.p12 provisioning/Certificates.p12.gpg
-gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output provisioning/GitInbox_Distribution.mobileprovision provisioning/GitInbox_Distribution.mobileprovision.gpg
+gpg --decrypt --quiet --batch --yes --passphrase="$PROVISIONING_PASSWORD" --output "$CERTIFICATE" "$CERTIFICATE".gpg
+gpg --decrypt --quiet --batch --yes --passphrase="$PROVISIONING_PASSWORD" --output "$PROVISIONING" "$PROVISIONING".gpg
 
-# Move provisioning profile into place
-mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-echo "-------------"
+echo "Move provisioning profile into place"
+mkdir -p "$PROVISIONING_PATH"
+cp $PROVISIONING "$PROVISIONING_PATH"
 echo "List profiles:"
-ls ~/Library/MobileDevice/Provisioning\ Profiles/
-echo "-------------"
-echo "Move profiles"
-cp provisioning/*.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
-echo "-------------"
-echo "List profiles:"
-ls ~/Library/MobileDevice/Provisioning\ Profiles/
+ls "$PROVISIONING_PATH"
 
-# Move certificate into keychain
-security create-keychain -p "" build.keychain
-security import provisioning/Certificates.p12 -t agg -k ~/Library/Keychains/build.keychain -P "$PROVISIONING_PASSWORD" -A
+echo "Move certificate into keychain"
+security create-keychain -p '' build.keychain
+security import "$CERTIFICATE" -t agg -k "$KEYCHAIN" -P "$PROVISIONING_PASSWORD" -A
+security list-keychains -s "$KEYCHAIN"
 
-security list-keychains -s ~/Library/Keychains/build.keychain
-security default-keychain -s ~/Library/Keychains/build.keychain
-security unlock-keychain -p "" ~/Library/Keychains/build.keychain
-security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
+security default-keychain -s "$KEYCHAIN"
+security unlock-keychain -p '' "$KEYCHAIN"
+security set-key-partition-list -S apple-tool:,apple: -s -k "" "$KEYCHAIN"
