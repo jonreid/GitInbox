@@ -15,12 +15,12 @@ echo "Move provisioning profile into place"
 mkdir -p "$PROVISIONING_PATH"
 cp $PROVISIONING "$PROVISIONING_PATH"
 echo "List profiles:"
-ls "$PROVISIONING_PATH"
+ls ~/Library/MobileDevice/Provisioning\ Profiles
 
 echo "Move certificate into keychain"
 security create-keychain -p '' build.keychain
 security import "$CERTIFICATE" -t agg -k "$KEYCHAIN" -P "$PROVISIONING_PASSWORD" -A
-security list-keychains -s "$KEYCHAIN"
+security list-keychains -s ~/Library/Keychains/build.keychain
 
 security default-keychain -s "$KEYCHAIN"
 security unlock-keychain -p '' "$KEYCHAIN"
