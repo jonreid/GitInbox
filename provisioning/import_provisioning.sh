@@ -1,9 +1,11 @@
 @ -1,27 +1,27 @@
 #!/bin/sh
 
+CERTIFICATE='provisioning/Certificates.p12'
+
 # Decrypt the files
 # --batch to prevent interactive command --yes to assume "yes" for questions
-gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output provisioning/Certificates.p12 provisioning/Certificates.p12.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output "$CERTIFICATE" "$CERTIFICATE".gpg
 gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output provisioning/GitInbox_Distribution.mobileprovision provisioning/GitInbox_Distribution.mobileprovision.gpg
 
 # Move provisioning profile into place
@@ -20,7 +22,7 @@ ls ~/Library/MobileDevice/Provisioning\ Profiles/
 
 # Move certificate into keychain
 security create-keychain -p "" build.keychain
-security import provisioning/Certificates.p12 -t agg -k ~/Library/Keychains/build.keychain -P "$PROVISIONING_PASSWORD" -A
+security import "$CERTIFICATE" -t agg -k ~/Library/Keychains/build.keychain -P "$PROVISIONING_PASSWORD" -A
 
 security list-keychains -s ~/Library/Keychains/build.keychain
 security default-keychain -s ~/Library/Keychains/build.keychain
