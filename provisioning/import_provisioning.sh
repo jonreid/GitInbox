@@ -1,4 +1,3 @@
-@ -1,27 +1,27 @@
 #!/bin/bash
 
 CERTIFICATE='provisioning/Certificates.p12'
