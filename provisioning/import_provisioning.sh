@@ -2,11 +2,12 @@
 #!/bin/sh
 
 CERTIFICATE='provisioning/Certificates.p12'
+PROVISIONING='provisioning/GitInbox_Distribution.mobileprovision'
 
 # Decrypt the files
 # --batch to prevent interactive command --yes to assume "yes" for questions
 gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output "$CERTIFICATE" "$CERTIFICATE".gpg
-gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output provisioning/GitInbox_Distribution.mobileprovision provisioning/GitInbox_Distribution.mobileprovision.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output "$PROVISIONING" "$PROVISIONING".gpg
 
 # Move provisioning profile into place
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
@@ -15,7 +16,7 @@ echo "List profiles:"
 ls ~/Library/MobileDevice/Provisioning\ Profiles/
 echo "-------------"
 echo "Move profiles"
-cp provisioning/*.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
+cp "$PROVISIONING" ~/Library/MobileDevice/Provisioning\ Profiles/
 echo "-------------"
 echo "List profiles:"
 ls ~/Library/MobileDevice/Provisioning\ Profiles/
