@@ -17,9 +17,9 @@ jobs:
     name: Build and test
     runs-on: macos-13
     steps:
-    - uses: actions/checkout@v4
     - name: Commit SHA
       run: echo $GITHUB_SHA
+    - uses: actions/checkout@v4
     - name: List available Xcode versions
       run: ls /Applications | grep Xcode
     - name: Set up Xcode version
