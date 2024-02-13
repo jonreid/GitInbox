@@ -19,7 +19,7 @@ ls ~/Library/MobileDevice/Provisioning\ Profiles/
 echo 'Move certificate into keychain'
 security create-keychain -p "$KEYCHAIN_PASSWORD" build.keychain
 security import "$CERTIFICATE" -t agg -k ~/Library/Keychains/build.keychain -P "$PROVISIONING_PASSWORD" -A
-security list-keychains -s ~/Library/Keychains/build.keychain
+security list-keychains -d user -s ~/Library/Keychains/build.keychain
 
 security default-keychain -s ~/Library/Keychains/build.keychain
 security unlock-keychain -p "$KEYCHAIN_PASSWORD" ~/Library/Keychains/build.keychain
