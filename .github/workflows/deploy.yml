@@ -25,8 +25,6 @@ jobs:
       run: sudo xcode-select -s /Applications/Xcode_15.1.app/Contents/Developer
     - name: Show current version of Xcode
       run: xcodebuild -version
-    - name: Dump file hierarchy
-      run: ls -R
     - name: Import provisioning
       run: provisioning/import_provisioning.sh
       env:
@@ -40,4 +38,4 @@ jobs:
         xcrun altool --upload-app --type ios \
           --file DerivedData/ipa/GitInbox.ipa \
           --username "${{ secrets.APPSTORE_CONNECT_USERNAME }}" \
-          --password "${{ secrets.APPSTORE_CONNECT_PASSWORD }}" --verbose
+          --password "${{ secrets.APPSTORE_CONNECT_PASSWORD }}"
