@@ -35,7 +35,7 @@ jobs:
       run: ./build_archive.sh
     - name: Deploy App to Apple
       run: |
-        xcrun altool --upload-app --type ios \
+        xcrun altool --upload-app --verbose --type ios \
           --file DerivedData/ipa/GitInbox.ipa \
           --username "${{ secrets.APPSTORE_CONNECT_USERNAME }}" \
           --password "${{ secrets.APPSTORE_CONNECT_PASSWORD }}"
