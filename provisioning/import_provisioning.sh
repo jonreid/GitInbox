@@ -16,12 +16,11 @@ cp "$PROVISIONING" ~/Library/MobileDevice/Provisioning\ Profiles/
 echo "List profiles:"
 ls ~/Library/MobileDevice/Provisioning\ Profiles/
 
-echo 'Create temporary keychain'
-security create-keychain -p "$KEYCHAIN_PASSWORD" build.keychain
-security default-keychain -s ~/Library/Keychains/build.keychain
-security unlock-keychain -p "$KEYCHAIN_PASSWORD" ~/Library/Keychains/build.keychain
-
 echo 'Move certificate into keychain'
+security create-keychain -p "$KEYCHAIN_PASSWORD" build.keychain
 security import "$CERTIFICATE" -t agg -k ~/Library/Keychains/build.keychain -P "$PROVISIONING_PASSWORD" -A
 security list-keychains -s ~/Library/Keychains/build.keychain
-# security set-key-partition-list -S apple-tool:,apple: -s -k "$KEYCHAIN_PASSWORD" ~/Library/Keychains/build.keychain
+
+security default-keychain -s ~/Library/Keychains/build.keychain
+security unlock-keychain -p "$KEYCHAIN_PASSWORD" ~/Library/Keychains/build.keychain
+security set-key-partition-list -S apple-tool:,apple: -s -k "$KEYCHAIN_PASSWORD" ~/Library/Keychains/build.keychain
