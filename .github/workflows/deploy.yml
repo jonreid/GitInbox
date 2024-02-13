@@ -16,7 +16,7 @@ jobs:
           exit 1
   on-success:
     runs-on: macos-13
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    # if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
     - uses: actions/checkout@v4
     - name: Commit SHA
