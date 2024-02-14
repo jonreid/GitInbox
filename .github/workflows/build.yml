@@ -28,8 +28,7 @@ jobs:
       run: xcodebuild -version
     - name: Run tests
       run: ./run_tests.sh
-    - name: Archive full build log
-      uses: actions/upload-artifact@v4
+    - uses: kishikawakatsumi/xcresulttool@v1
       with:
-        name: xcodebuild.log
-        path: xcodebuild.log
+        path: TestResults.xcresult
+      if: success() || failure()
