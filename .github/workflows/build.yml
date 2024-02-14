@@ -28,7 +28,7 @@ jobs:
       run: xcodebuild -version
     - name: Run tests
       run: ./run_tests.sh
-    - uses: kishikawakatsumi/xcresulttool@v1
+    - uses: kishikawakatsumi/xcresulttool@v1.7.1
       with:
         path: TestResults.xcresult
       if: success() || failure()
