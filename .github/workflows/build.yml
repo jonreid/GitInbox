@@ -23,12 +23,8 @@ jobs:
     - name: List available Xcode versions
       run: ls /Applications | grep Xcode
     - name: Set up Xcode version
-      run: sudo xcode-select -s /Applications/Xcode_15.1.app/Contents/Developer
+      run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
     - name: Show current version of Xcode
       run: xcodebuild -version
     - name: Run tests
       run: ./run_tests.sh
-    - uses: kishikawakatsumi/xcresulttool@v1.7.1
-      with:
-        path: TestResults.xcresult
-      if: success() || failure()
